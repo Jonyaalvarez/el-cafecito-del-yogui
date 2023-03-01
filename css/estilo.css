@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 ul{
@@ -39,12 +40,7 @@ p{
     background-size: cover;
 }
 
-.foto-sobre-nosotros img{
-    border: 2px solid blueviolet;
-    border-radius: 20px;
-    padding: 10px;
-    width: 50%;
-}
+
 
 #tarjetaPresentacionProfesoras div{
     border: 3px double rgb(247, 138, 156);
@@ -79,3 +75,45 @@ p{
     background-color:  violet;
 }
 
+/* Pagina de Inicio */
+.content-all{
+    width: 210px;
+    margin: auto;
+    perspective:1000px ;
+    position: relative;
+    padding-bottom: 250px;
+    padding-top: 50px;
+}
+
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    animation: rotar 20s infinite;
+    transform-style: preserve-3d;
+}
+.content-carrousel figure{
+    width:100% ;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    margin-bottom: 250px;
+}
+.content-carrousel figure:nth-child(1){ transform: rotateY(0deg) translateZ(300px);}
+.content-carrousel figure:nth-child(2){ transform: rotateY(45deg) translateZ(300px);}
+.content-carrousel figure:nth-child(3){ transform: rotateY(90deg) translateZ(300px);}
+.content-carrousel figure:nth-child(4){ transform: rotateY(135deg) translateZ(300px);}
+.content-carrousel figure:nth-child(5){ transform: rotateY(180deg) translateZ(300px);}
+.content-carrousel figure:nth-child(6){ transform: rotateY(225deg) translateZ(300px);}
+.content-carrousel figure:nth-child(7){ transform: rotateY(270deg) translateZ(300px);}
+.content-carrousel figure:nth-child(8){ transform: rotateY(315deg) translateZ(300px);}
+.content-carrousel figure:nth-child(9){ transform: rotateY(360deg) translateZ(300px);}
+.content-carrousel img{
+    width: 100%;
+}
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }to{
+        transform: rotateY(360deg);
+    }
+}
